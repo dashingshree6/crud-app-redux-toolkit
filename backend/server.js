@@ -1,9 +1,21 @@
 const express = require('express')
+const db = require('./models/index')
       cors = require('cors')
       app = express()
+      db = require('./models/index')
 var corsOptions = {
     origin : "http://localhost:8081"
 } 
+
+db.mongoose.connect(db.url, {
+    useNewUrlParser : true,
+    useUnifiedTopology : true
+}).then(() => {
+    console.log('Connected to database')
+}).catch(err => {
+    console.log('Connection Error - ',err)
+    process.exit()
+})
 
 app.use(cors(corsOptions))
 

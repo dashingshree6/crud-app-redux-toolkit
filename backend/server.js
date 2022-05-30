@@ -1,8 +1,7 @@
 const express = require('express')
 const db = require('./models/index')
-      cors = require('cors')
-      app = express()
-      db = require('./models/index')
+const cors = require('cors')
+const app = express()
 var corsOptions = {
     origin : "http://localhost:8081"
 } 
@@ -29,8 +28,8 @@ app.get('/', (req, res) => {
 
 require('./routes/tutorial.routes')(app)
 
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 9000
 
 app.listen(PORT, () => {
-    console.log('Server is running on port 8080')
+    console.log('Server is running on port '+PORT)
 })

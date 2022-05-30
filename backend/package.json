@@ -1,0 +1,15 @@
+{
+  "name": "crud-app",
+  "version": "1.0.0",
+  "description": "CRUD WITH REST API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api",
+    "mern"
+  ],
+  "author": "dashingshree6",
+  "license": "ISC"
+}

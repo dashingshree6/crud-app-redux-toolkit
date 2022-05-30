@@ -17,6 +17,6 @@ module.exports = mongoose => {
             object.id = _id
             return object
         })
-        const Tutorial = mongoose.model(schema, 'tutorial')
+        const Tutorial = mongoose.model('tutorial', schema)
         return Tutorial;
 }

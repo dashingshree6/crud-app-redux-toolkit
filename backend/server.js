@@ -27,6 +27,8 @@ app.get('/', (req, res) => {
     res.json({ message: 'Welcome to crude-app-redux-toolkit'})
 })
 
+require('./routes/tutorial.routes')(app)
+
 const PORT = process.env.PORT || 8080
 
 app.listen(PORT, () => {

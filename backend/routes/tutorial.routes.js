@@ -14,7 +14,7 @@ module.exports = app=> {
 
     router.delete('/:id', tutorials.delete)
 
-    router.delete('/:id', tutorials.deleteAll)
+    router.delete('/', tutorials.deleteAll)
 
     app.use('/api/tutorials', router)
 }

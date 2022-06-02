@@ -44,7 +44,7 @@ const AddTutorial = () => {
             (
                 <div>
                     <h4>You submitted successfully</h4>
-                    <button onClick={newTuorial} className="btn btn-success">
+                    <button onClick={newTutorial} className="btn btn-success">
                         Add
                     </button>
                 </div>

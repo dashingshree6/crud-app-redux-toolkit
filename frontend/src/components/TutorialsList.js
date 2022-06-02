@@ -11,6 +11,42 @@ const TutorialsList = () => {
     const tutorials = useSelector(state => state.tutorials)
     const dispatch = useDispatch()
 
+    const onCHangeSearchTitle = (e) => {
+        const SearchTitle = e.target.value
+        setSearchTitle(SearchTitle)
+    }
+
+    const initFetch = useCallback(() => {
+        dispatch(retrieveTutorial())
+    },[dispatch])
+
+    useEffect(() => {
+        initFetch()
+    },[initFetch])
+
+    const refreshData = () => {
+        setCurrentTutorial(null)
+        setCurrentIndex(-1)
+    }
+
+    const setActiveTutorial = (tutorial,index) => {
+        setCurrentTutorial(tutorial)
+        setCurrentIndex(index)        
+    }
+
+    const removeAllTutorials = () => {
+        dispatch(deleteAllTutorial()).then(response => {
+            refreshData()
+        }).catch(err => {
+            console.log(err)
+        })
+    }
+
+    const findByTitle = () => {
+        refreshData();
+        dispatch(findTutorialByTitle({ title: searchTitle}))
+    }
+
     return (
         <div className='list row'>
             <div className='col-md-8'>

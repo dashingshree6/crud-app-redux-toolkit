@@ -119,7 +119,7 @@ const Tutorial = (props) => {
 
                         <button 
                         className='badge badge-danger mr-2'
-                        onClick={() => updateStatus(true)}
+                        onClick={() => removeTutorial}
                         >
                             Delete
                         </button>

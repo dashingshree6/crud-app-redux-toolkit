@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import TutorialDataService from '../services/TutorialService'
 
-const intialState = []
+const initialState = []
 
 export const createTutorial = createAsyncThunk(
     "tutorials/create",

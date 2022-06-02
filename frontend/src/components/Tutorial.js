@@ -2,7 +2,6 @@ import React, { useState, useEffect} from 'react';
 import { useDispatch } from 'react-redux';
 import { updateTutorial, deleteTutorial } from '../slices/tutorials';
 import TutorialService from '../services/TutorialService';
-import { current } from 'immer/dist/internal';
 
 
 const Tutorial = (props) => {
